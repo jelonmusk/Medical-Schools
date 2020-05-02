@@ -1,9 +1,0 @@
-<li class="active"><a href="/">Home</a></li>
-     <li class="active"><a href="https://discord.gg/sentdex">Community</a></li>
-     {% if user.is_authenticated %}
-          <li class="active"><a href="/account">{{user.username|title}}</a></li>
-          <li class="active"><a href="/logout">Logout</a></li>
-     {% else %}
-         <li class="active"><a href="/login">Login</a></li>
-         <li class="active"><a href="/register">Register</a></li>
-     {% endif %}
