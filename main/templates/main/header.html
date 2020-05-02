@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- Prism CSS -->
+    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link href="{% static "main/css/materialize.css" %}" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <!--materialize nav bar i dont like it tho its eww but sentdex says so....-->
+  <nav>
+    <div class="nav-wrapper"
+      <a href="/" class="brand-logo"> Tutorials</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {% include 'main/includes/navbaritems.html' %}
+      </ul>
+    </div>
+  </nav>
+
+  {% include 'main/includes/messaging.html' %}
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+<!-- Prism JS -->
+<script src="{% static "tinymce/js/prism.js" %}"></script>
+<!--initialsing collapsible js fo sidebar cardsr -->
+<script>
+  M.AutoInit();
+</script>
